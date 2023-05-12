@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clasificacion de imagenes</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+
+    <div class="form">
+      <h2>Clasificación de imagenes</h2>
+
+      <div class="grid">
+        <div class="form-element">
+          <img
+            src="https://www.nbmchealth.com/wp-content/uploads/2018/04/default-placeholder.png"
+            id="input_image"
+            width="224"
+            height="224"
+          />
+          <!-- Creación botones para subir y predicción-->
+          <input
+            type="file"
+            name="fileupload"
+            accept="image/*"
+            onchange="display(event)"
+          />
+          <button onclick="predict_animal()">Predecir imagen</button>
+        </div>
+
+        <div class="list">
+          <ul>
+            <li>Aguila</li>
+            <li>Cangrejo</li>
+            <li>Colibri</li>
+            <li>Dragon de komodo</li>
+            <li>Luciernaga</li>
+          </ul>
+        </div>
+
+        <div class="list">
+          <ul>
+            <li>Mono araña</li>
+            <li>Oso polar</li>
+            <li>Puma</li>
+            <li>Tiburon martillo</li>
+            <li>Zebra</li>
+          </ul>
+        </div>
+      </div>
+      <h3 id="output_text"></h3>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
